@@ -117,7 +117,7 @@ for layer in QgsProject.instance().mapLayers().values():
 ################################################################################
 
 """-----------------------------
-2. JOIN FIELDS 
+3. JOIN FIELDS 
 ---------------------------------"""
 # In this exemple we only want to delete the KM2 and PAYS_2 fields
 for layer in layers:
