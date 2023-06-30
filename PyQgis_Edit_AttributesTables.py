@@ -100,10 +100,10 @@ layers_names = []
 layersPt_names = []
 for layer in QgsProject.instance().mapLayers().values():
     
-    if layer.geometryType() == 2:                                     #if the feature is a point(station)
+    if layer.geometryType() == 2:                                     # if the feature is a polygone(sub-watershed) 
         layers_names.append(layer.name())
  
-    elif layer.geometryType() == 0:                                      #if the feature is a polygone(sub-watershed)
+    elif layer.geometryType() == 0:                                      # if the feature is a point(station)
         layersPt_names.append(layer.name())
 
      
@@ -132,5 +132,5 @@ for layer in layers:
             
             
 
-print("OK JAZZ".center(80,"*"))
+print("OK JAZZ".center(80,"♠"))
 ## -------------------------------- OK JAZZ ------------------------
