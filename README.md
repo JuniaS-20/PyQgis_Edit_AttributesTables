@@ -14,4 +14,7 @@ Test script with data.
 For the script to work, don't forget to replace the paths where the sub-basins and stations are located, and the output path where the attached file will be written. Again, keep parts 1 and 3 as comments before running the script.
 3.	Here we want to delete the PAYS_2 and KM2 fields from the attached Alindao file. Again, comment on parts 1 and 2.
 NB: To avoid renaming or deleting unwanted fields, the best way would be to copy each part and take it individually as a separate script, while keeping the header that calls the processing functions.
+
+- 4. REPROJECT_LAYERS Added is a piece of code that reprojects layers.
+It lets you reproject all your vector or raster layers from your Qgis project to the CRS you want.
 Good luck and please let me know of any difficulties or requirements.
