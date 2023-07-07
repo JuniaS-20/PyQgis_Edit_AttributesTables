@@ -129,6 +129,26 @@ for layer in layers:
         if field.name() ==  'KM2'or field.name() ==  'PAYS_2':
             idx = layer.fields().indexFromName(field.name())
             layer.deleteAttribute(idx)
+
+
+"""-----------------------------
+4. REPROJECT_LAYERS 
+---------------------------------"""
+""" This peace of code allow you to reproject all your layers of the Qgis project to the CRS you desire """
+layers = QgsProject.instance().mapLayers().values()
+target_crs = QgsCoordinateReferenceSystem("EPSG:4326")# CRS you whish
+print('target_crs :',target_crs )
+
+
+
+for layer in layers:
+    source_crs1 = QgsCoordinateReferenceSystem(layer.crs().authid())
+    print('Layer::',layer, 'CRS::',source_crs1)# Print layer's name and CRS before CRSTransform
+    if source_crs1 != target_crs:
+         layer.setCrs(target_crs)
+         
+         
+    print('Layer::',layer, 'CRS::',source_crs1)# Print layer's name and CRS After CRSTransform
             
             
 
